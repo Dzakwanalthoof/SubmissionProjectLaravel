@@ -5,7 +5,6 @@
     @stack('styles')
 </head>
 <body>
-    @include('partials.navbar')
     <main>@yield('content')</main>
     <footer>&copy; {{ date('Y') }}</footer>
     @stack('scripts')
