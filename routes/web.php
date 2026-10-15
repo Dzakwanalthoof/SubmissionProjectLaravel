@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MahasiswaController;
-use APP\Htpp\Controllers\ProductController;
+use APP\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
