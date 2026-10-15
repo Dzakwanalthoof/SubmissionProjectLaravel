@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MahasiswaController;
+use APP\Htpp\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -74,3 +75,12 @@ Route::get('/mahasiswa', [MahasiswaController::class, 'daftar'])
     ->name('mahasiswa.daftar');
 Route::get('/mahasiswa/{nim}', [MahasiswaController::class, 'show'])
     ->name('mahasiswa.detail');
+
+//produkcontroller
+Route::get('/products',[ProductController::class,'index']);
+/*
+Route::get('/products/{id}',function($id){
+    return 'produk #' . $id;
+});
+*/
+Route::get('/products/{id}',[ProductController::class,'show']);
