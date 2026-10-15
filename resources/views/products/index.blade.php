@@ -1,1 +1,1 @@
-{{"Selamat Datang".$product}}
+{{"Selamat Datang".$products}}
