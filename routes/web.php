@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\JurusanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -84,3 +85,7 @@ Route::get('/products/{id}',function($id){
 });
 */
 Route::get('/products/{id}',[ProductController::class,'show']);
+
+// materi 5
+Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/jurusan/{id}', [JurusanController::class, 'show']);

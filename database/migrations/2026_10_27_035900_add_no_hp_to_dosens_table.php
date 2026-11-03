@@ -11,18 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('dosens', function (Blueprint $table) {
-            //
-        });
+    Schema::table('dosens', function (Blueprint $table) {
+        $table->string('no_hp', 15)->nullable()->after('email');
+    });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::table('dosens', function (Blueprint $table) {
-            //
-        });
-    }
+    Schema::table('dosens', function (Blueprint $table) {
+        $table->dropColumn('no_hp');
+    });
+}
 };
